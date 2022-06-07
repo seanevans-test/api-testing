@@ -8,14 +8,12 @@ app.get('/first', (err, res) => {
     res.status(200).json({"ok": "response"});
 });
 
-
 describe('First test', () => {
-    it('ok response', () => {
-        request(app)
-            .get('/first')
-            .end((err, res) => {
-                expect(res.statusCode).to.be.equal(200);
-                
-            };
-    });
+   it('OK response', () => {
+      request(app)
+          .get('/first')
+          .end((err, res) => {
+              expect((res.statusCode).to.be.equal(200);
+          });
+   });
 });
