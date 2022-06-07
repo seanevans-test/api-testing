@@ -13,7 +13,7 @@ describe('First test', () => {
       request(app)
           .get('/first')
           .end((err, res) => {
-              expect((res.statusCode).to.be.equal(200);
+              expect(res.statusCode).to.be.equal(200);
           });
    });
 });
