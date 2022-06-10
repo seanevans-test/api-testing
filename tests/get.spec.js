@@ -10,4 +10,13 @@ describe('get requests', () => {
              expect(res.body.id).to.be.equal('1');
           });
    });
+   //localhost/course?name=mocha
+    it('get query param name', async (done) => {
+            request(app)
+                .get('/course')
+                .query({'name' : 'mocha'})
+                .expect(200, {id: '1', name: 'mocha'});
+            done();
+    });
 });
+
