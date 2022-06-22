@@ -1,6 +1,6 @@
 const app = require('../src/app');
 const request = require('supertest');
-const expect = require('chai');
+var expect = require('chai').expect
 
 describe('Post requests', () => {
     it('json response', () => {
