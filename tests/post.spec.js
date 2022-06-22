@@ -12,4 +12,12 @@ describe('Post requests', () => {
                 expect(res.body.name).to.be.equal('supertest');
             })
     });
+
+    it('form response', () => {
+        request(app)
+            .post('/course')
+            .send('name=supertest')
+            .set('Accept', 'application/x-www-form-urlencoded')
+            .expect(200, {"id": "2", "name":"supertest" }, done);
+    });
 })
