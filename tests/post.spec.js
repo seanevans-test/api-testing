@@ -1,6 +1,6 @@
 const app = require('../src/app');
 const request = require('supertest');
-var expect = require('chai').expect
+const expect = require('chai').expect
 
 describe('Post requests', () => {
     it('json response', () => {
@@ -18,6 +18,7 @@ describe('Post requests', () => {
             .post('/course')
             .send('name=supertest')
             .set('Accept', 'application/x-www-form-urlencoded')
-            .expect(200, {"id": "2", "name":"supertest" }, done);
+            .expect(200, {"id": "2", "name":"supertest" });
+        process.exit();
     });
 })
