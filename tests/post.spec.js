@@ -20,6 +20,5 @@ describe('Post requests', () => {
             .set('Accept', 'application/x-www-form-urlencoded')
             .expect(200, {"id": "2", "name":"supertest" });
         done();
-        process.exit();
     });
 })

@@ -17,7 +17,6 @@ describe('get requests', () => {
                 .query({'name' : 'mocha'})
                 .expect(200, {id: '1', name: 'mocha'});
             done();
-            process.exit();
     });
 });
 
