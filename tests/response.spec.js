@@ -10,4 +10,12 @@ describe('response', () =>{
                 expect(res.body.id).to.be.equal('1');
             })
     });
+
+    it('text response', () => {
+        request(app)
+            .get('/course')
+            .end((err, res) => {
+                expect(res.text).to.contain('1');
+            })
+    });
 });
