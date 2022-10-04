@@ -18,4 +18,12 @@ describe('response', () =>{
                 expect(res.text).to.contain('1');
             })
     });
+
+    it('status response', () => {
+        request(app)
+            .get('/course')
+            .end((err, res) => {
+                expect(res.ok).to.be.true;
+            })
+    });
 });
